@@ -14,6 +14,8 @@ export interface IWheelConfig {
   rollDelay?: number; // 滚动延迟
   autoStop?: boolean; // 是否自动停止
   autoStopDelay?: number; // 自动停止延迟
+  showWheelName?: boolean; // 是否显示转盘名称
+  showPrizeName?: boolean; // 是否显示奖品名称
 }
 
 export interface IWheel {

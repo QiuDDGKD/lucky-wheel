@@ -9,7 +9,7 @@
             <a-icon @click="editWheel(wheel)" type="edit" />
           </div>
         </template>
-        <MyWheel :wheel="wheel.key"></MyWheel>
+        <MyWheel :wheel="wheel.key" :name="wheel.name"></MyWheel>
       </a-tab-pane>
     </a-tabs>
   </div> 
