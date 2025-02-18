@@ -50,7 +50,7 @@
       </a-card>
       <a-card title="转盘">
         <div class="wheel-box">
-          <a-tag v-if="config.showWheelName" color="geekblue" :style="{ fontSize: fontSize, lineHeight: 'normal' }">{{ name }}</a-tag>
+          <a-tag v-if="config.showWheelName" color="#c1c2f9" :style="{ fontSize: fontSize, lineHeight: 'normal' }">{{ name }}</a-tag>
           <span v-if="config.showPrizeName" :style="{ fontSize: fontSize }">{{ prizeName }}</span>
           <LuckyWheel
             v-if="showWheel"
