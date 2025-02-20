@@ -16,6 +16,8 @@ export interface IWheelConfig {
   autoStopDelay?: number; // 自动停止延迟
   showWheelName?: boolean; // 是否显示转盘名称
   showPrizeName?: boolean; // 是否显示奖品名称
+  verticalPrizeName?: boolean; // 是否垂直显示奖品名称
+  fontSize?: number; // 字体大小
 }
 
 export interface IWheel {

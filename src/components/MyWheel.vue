@@ -12,6 +12,11 @@
             <a-input-number v-model:value="config.size" :min="300" :max="1000" />
           </a-col>
           <a-col :span="8">
+            <a-form-item label="字体大小">
+              <a-slider v-model:value="config.fontSize" :min="5" :max="40" />
+            </a-form-item>
+          </a-col>
+          <a-col :span="8">
             <a-form-item label="抽中后减少数量">
               <a-switch v-model:checked="config.reduce" />
             </a-form-item>
@@ -44,6 +49,11 @@
           <a-col :span="8">
             <a-form-item label="显示奖品名称">
               <a-switch v-model:checked="config.showPrizeName" />
+            </a-form-item>
+          </a-col>
+          <a-col :span="8">
+            <a-form-item label="转盘选项名称垂直显示">
+              <a-switch v-model:checked="config.verticalPrizeName" />
             </a-form-item>
           </a-col>
         </a-row>
@@ -185,7 +195,12 @@ const prizes = computed(() => {
     result.push({
       id: item.id,
       range: item.range,
-      fonts: [{ text: item.name, top: '10%' }],
+      fonts: [{ 
+        text: config.value.verticalPrizeName? item.name.split('').join('\n') : item.name, 
+        top: '5%',
+        wordWrap: config.value.verticalPrizeName ? false : true,
+        fontSize: `${config.value.fontSize? config.value.fontSize : 22}px`,
+      }],
       background: '',
     })
 
